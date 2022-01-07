@@ -2,10 +2,29 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>WEBXR - Lesson 1: WebGL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WebGL: Lesson 1</title>
     </head>
     <body>
-        <h1> Hello Lesson 1 world </h1>
+        <canvas id="canvas"></canvas>
         <script src="lesson1.js"></script>
+        <script id="vertex-data" type="not-javascript"></script>
+        <script id="fragment-data" type="not-javascript"></script>
+
+        <script id="vetex-source" type="not-javascript">
+            attribute vec4 vertex_points;
+
+            void main() {
+                gl_Position = vertex_points;
+            }
+        </script>
+
+        <script id="fragment-source" type="not-javascript">
+            precision mediump float;
+
+            void main() {
+                gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+            }
+        </script>
     </body>
 </html>
